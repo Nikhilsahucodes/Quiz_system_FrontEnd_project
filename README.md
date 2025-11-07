@@ -1,6 +1,6 @@
-# Frontend Developer Quiz — Pooja (Upgraded Version)
+# Frontend Developer Quiz — Nikhil (Upgraded Version)
 
-This is an upgraded, clean and simple frontend prototype of a quiz system created by Pooja for a 15-day internship submission.
+This is an upgraded, clean and simple frontend prototype of a quiz system created by Nikhil for a 15-day internship submission.
 
 ## Features
 - 5 Pages (Home, Quiz, Result, Data, About)
@@ -35,4 +35,4 @@ Frontend-quiz-pooja-internship-upgraded/
 This is a frontend-only prototype. For production you would add a backend to persist user results and authenticate users.
 
 ## Author
-Pooja — Frontend Developer Intern (2025)
+Nikhil — Frontend Developer Intern (2025)
