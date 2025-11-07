@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Result — Frontend Quiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand"><h1>Frontend Developer Quiz</h1></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="data.html">Data</a>
+        <a href="about.html" class="nav-about">About</a>
+      </nav>
+      <div class="actions"><button id="theme-toggle" class="theme-toggle">🌙</button></div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="card result-card">
+      <h2>Your Result</h2>
+      <p id="score" class="big">0 / 7</p>
+      <p id="feedback" class="muted">Feedback will appear here.</p>
+      <div class="form-actions">
+        <a class="btn primary" href="quiz.html">Try Again</a>
+        <a class="btn outline" href="index.html">Home</a>
+      </div>
+    </section>
+
+    <section class="card full-card">
+      <h3>About Scores</h3>
+      <p class="muted">This is a client-side prototype: scores are stored in the session. In a real application, scores would be saved to a server and database.</p>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const score = parseInt(sessionStorage.getItem('sq_score') || '0', 10);
+      const total = parseInt(sessionStorage.getItem('sq_total') || '7', 10);
+      document.getElementById('score').textContent = score + ' / ' + total;
+      const feedback = document.getElementById('feedback');
+      const pct = (score/total) * 100;
+      if(pct >= 80) feedback.textContent = 'Excellent work!';
+      else if(pct >= 50) feedback.textContent = 'Good effort — keep practicing.';
+      else feedback.textContent = 'Keep learning — you will improve.';
+    })();
+  </script>
+</body>
+</html>

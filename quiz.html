@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz — Frontend Basics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/quiz.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Frontend Developer Quiz</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="data.html">Data</a>
+        <a href="about.html" class="nav-about">About</a>
+      </nav>
+      <div class="actions">
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="card quiz-card">
+      <h2>Frontend Basics — 7 Questions</h2>
+      <p class="muted">Select the best answer for each question. This quiz uses simple client-side scoring.</p>
+
+      <form id="quiz-form" class="quiz-form">
+        <fieldset class="q">
+          <legend>1. Which tag is used for the main heading of a page?</legend>
+          <label><input type="radio" name="q1" value="a"> &lt;h1&gt;</label>
+          <label><input type="radio" name="q1" value="b"> &lt;header&gt;</label>
+          <label><input type="radio" name="q1" value="c"> &lt;title&gt;</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>2. Which CSS property controls the space between letters?</legend>
+          <label><input type="radio" name="q2" value="a"> letter-spacing</label>
+          <label><input type="radio" name="q2" value="b"> word-spacing</label>
+          <label><input type="radio" name="q2" value="c"> line-height</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>3. Which element links an external CSS file?</legend>
+          <label><input type="radio" name="q3" value="a"> &lt;link rel='stylesheet'&gt;</label>
+          <label><input type="radio" name="q3" value="b"> &lt;style&gt;</label>
+          <label><input type="radio" name="q3" value="c"> &lt;script&gt;</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>4. What layout model is best for two-dimensional layouts (rows and columns)?</legend>
+          <label><input type="radio" name="q4" value="a"> CSS Grid</label>
+          <label><input type="radio" name="q4" value="b"> Flexbox</label>
+          <label><input type="radio" name="q4" value="c"> Float</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>5. Which JS method attaches an event listener?</legend>
+          <label><input type="radio" name="q5" value="a"> addEventListener()</label>
+          <label><input type="radio" name="q5" value="b"> attachEvent()</label>
+          <label><input type="radio" name="q5" value="c"> onEvent()</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>6. Which attribute provides alternative text for images?</legend>
+          <label><input type="radio" name="q6" value="a"> alt</label>
+          <label><input type="radio" name="q6" value="b"> title</label>
+          <label><input type="radio" name="q6" value="c"> desc</label>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend>7. Which unit is relative to the root font size?</legend>
+          <label><input type="radio" name="q7" value="a"> em</label>
+          <label><input type="radio" name="q7" value="b"> rem</label>
+          <label><input type="radio" name="q7" value="c"> px</label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <a class="btn outline" href="index.html">Cancel</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="card info-card">
+      <h3>Need help?</h3>
+      <p class="muted">Read the About page or check the Data page for sample attempts and guidance.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Pooja Dhakad & Nikhil Shahu — Frontend Developer Quiz</p>
+    </div>
+  </footer>
+</body>
+</html>

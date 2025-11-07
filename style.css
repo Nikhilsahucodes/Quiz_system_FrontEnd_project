@@ -1,0 +1,94 @@
+/* Typography & base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #f6f9ff;
+  --card: #ffffff;
+  --text: #0b2340;
+  --muted: #5b6b7a;
+  --accent: #1e6fff;
+  --accent-2: #0ea5d9;
+  --surface: #f0f4ff;
+}
+
+body.dark{
+  --bg: #0b1220;
+  --card: #0f1724;
+  --text: #e6eef8;
+  --muted: #9aa4b2;
+  --accent: #6c8cff;
+  --accent-2: #8be3c3;
+  --surface: #0b1220;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* Layout */
+.container{width:90%;max-width:1100px;margin:0 auto}
+.site-header{background:var(--card);box-shadow:0 2px 6px rgba(11,18,32,0.06);}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand h1{margin:0;font-size:20px}
+.brand .subtitle{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* Nav */
+.nav a{margin:0 12px;color:var(--muted);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--text)}
+.theme-toggle{background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--text)}
+
+/* Main content */
+.main{flex:1;padding:28px 0}
+.card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 20px rgba(11,18,32,0.06);margin-bottom:18px}
+.hero{padding:28px}
+.lead{color:var(--muted);margin-top:8px;margin-bottom:12px}
+
+.hero-actions{margin-top:14px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none}
+.btn.outline{background:transparent;border:1px solid rgba(11,18,32,0.06);color:var(--text)}
+
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.content-grid .card{min-height:160px}
+
+/* Quiz styles */
+.quiz-card{padding:20px}
+.quiz-form .q{margin:14px 0;padding:12px;border-radius:8px;background:var(--surface);border:1px solid rgba(11,18,32,0.04)}
+.quiz-form legend{font-weight:600;margin-bottom:8px}
+.quiz-form label{display:block;margin:6px 0;color:var(--muted)}
+
+.form-actions{margin-top:12px}
+
+/* Result & table */
+.result-card{text-align:center}
+.result-card .big{font-size:40px;font-weight:700;margin:10px 0}
+.table-wrap{overflow:auto}
+.data-table{width:100%;border-collapse:collapse}
+.data-table th,.data-table td{padding:10px;border-bottom:1px solid rgba(11,18,32,0.05);text-align:left}
+
+/* About & full height cards */
+.full-card{min-height:140px}
+.about-card ul{list-style:disc;margin-left:18px;color:var(--muted)}
+
+/* Footer */
+.site-footer{background:var(--card);padding:16px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(11,18,32,0.03)}
+
+/* Responsive */
+@media (max-width:900px){
+  .content-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .content-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .brand{display:flex;flex-direction:column}
+}
